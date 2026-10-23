@@ -92,11 +92,10 @@
   var lb = $('.lightbox');
   if (lb) {
     var lbImg = $('img', lb), lbCap = $('p', lb), lastFocus = null;
-    $all('.gallery button').forEach(function (b) {
-      b.addEventListener('click', function () {
-        lastFocus = b; lbImg.src = b.dataset.full; lbImg.alt = b.dataset.cap; lbCap.textContent = b.dataset.cap;
-        lb.classList.add('open'); $('button', lb).focus();
-      });
+    document.addEventListener('click', function (ev) {
+      var b = ev.target.closest('.gallery button[data-full]'); if (!b) return;
+      lastFocus = b; lbImg.src = b.dataset.full; lbImg.alt = b.dataset.cap; lbCap.textContent = b.dataset.cap;
+      lb.classList.add('open'); $('button', lb).focus();
     });
     function closeLb() { lb.classList.remove('open'); lbImg.removeAttribute('src'); if (lastFocus) lastFocus.focus(); }
     $('button', lb).addEventListener('click', closeLb);
@@ -109,7 +108,7 @@
   var CFG = cfgEl ? JSON.parse(cfgEl.textContent) : null;
   var cfgReady = [];
   function whenConfig(fn) { if (CFG) fn(CFG); cfgReady.push(fn); }
-  if ($('[data-agecheck]') || $('[data-enquiry]') || $('[data-insta]')) {
+  if ($('[data-agecheck]') || $('[data-enquiry]') || $('[data-insta]') || $('[data-app-photos]')) {
     var ctl = ('AbortController' in window) ? new AbortController() : null;
     var timer = setTimeout(function () { if (ctl) ctl.abort(); }, 8000);
     fetch(API, { signal: ctl ? ctl.signal : undefined }).then(function (r) { return r.json(); }).then(function (j) {
@@ -135,6 +134,29 @@
       grid.appendChild(f);
     });
     if (grid.childNodes.length) insta.hidden = false;
+  });
+
+  /* ---------- photos the school approves in the app (see WEBSITE_API.md) ---------- */
+  var gal = $('[data-app-photos]');
+  if (gal) whenConfig(function (cfg) {
+    if (gal.dataset.loaded) return;
+    var ok = /^https:\/\/qtqmrfsndcxatbreclzi\.supabase\.co\//;
+    var photos = (cfg.photos || []).filter(function (p) { return ok.test(p.thumb || '') && ok.test(p.full || ''); });
+    if (!photos.length) return;
+    gal.dataset.loaded = '1';
+    var pressed = $('.filters[data-for="' + gal.id + '"] button[aria-pressed="true"]'), cat = pressed ? pressed.dataset.cat : 'all';
+    var first = gal.firstChild;
+    photos.slice(0, 60).forEach(function (p) {
+      var text = (LANG === 'mr' && p.caption_mr) ? p.caption_mr : (p.caption_en || '');
+      var cap = p.centre ? (text ? text + ' · ' : '') + nm(p.centre) : text;
+      var b = el('button', { type: 'button', 'data-full': p.full, 'data-cap': cap, 'aria-label': cap || gal.dataset.photo });
+      b.appendChild(el('img', { src: p.thumb, alt: cap || gal.dataset.photo, loading: 'lazy', decoding: 'async' }));
+      var f = el('figure', { 'data-cat': p.category || 'events', class: 'from-app' }); f.appendChild(b);
+      f.appendChild(el('span', { class: 'new' }, gal.dataset.new));
+      if (cap) f.appendChild(el('figcaption', null, cap));
+      if (cat !== 'all' && f.dataset.cat.indexOf(cat) < 0) f.classList.add('hidden');
+      gal.insertBefore(f, first);
+    });
   });
 
   /* ---------- age rules (same as the app; see WEBSITE_API.md) ---------- */
