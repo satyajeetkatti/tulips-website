@@ -126,6 +126,12 @@ main > section.block:nth-of-type(6n+6) .eyebrow { background: var(--blue); }
 .branches .branch:nth-child(2) { border-color: var(--orange); }
 .branches .branch:nth-child(3) { border-color: var(--purple); }
 
+/* messages from the Director and Principal (About page) */
+.message { margin-left: 0; margin-right: 0; padding: 18px 22px; background: #fff; border-radius: 22px; border-left: 8px solid var(--pink); box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+.message + .message { border-left-color: var(--sky); }
+.message p { margin: 0 0 8px; font-style: italic; }
+.message footer { font-weight: 700; color: var(--ink2, var(--green)); }
+
 /* Instagram posts on the gallery page */
 .insta-grid figure { border: 3px solid #fff; box-shadow: 0 6px 18px rgba(0,0,0,.12); }
 .insta-grid figure:nth-child(4n+1) { transform: rotate(-1.5deg); }
