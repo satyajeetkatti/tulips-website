@@ -123,8 +123,7 @@
   if (insta) whenConfig(function (cfg) {
     var posts = (cfg.instagram && cfg.instagram.posts) || [], grid = $('.insta-grid', insta);
     if (!posts.length || grid.childNodes.length) return;
-    posts.slice(0, 12).forEach(function (p) {
-      if (!p.image || !/^https:\/\/(www\.)?instagram\.com\//.test(p.permalink || '')) return;
+    posts.filter(function (p) { return p.image && /^https:\/\/(www\.)?instagram\.com\//.test(p.permalink || ''); }).slice(0, 12).forEach(function (p) {
       var cap = (p.caption || '').replace(/\s+/g, ' ').trim();
       var short = cap.length > 90 ? cap.slice(0, 88) + '…' : cap;
       var a = el('a', { href: p.permalink, target: '_blank', rel: 'noopener', 'aria-label': (short || grid.dataset.open) + ' — ' + grid.dataset.open });
