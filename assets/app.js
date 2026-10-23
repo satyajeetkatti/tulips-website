@@ -55,7 +55,7 @@
     'Tulips Montessori Balmandir Gaonbhag': 'ट्युलिप्स मॉंटेसोरी बालमंदिर, गावभाग',
     'SSC Board': 'राज्य मंडळ (SSC)', 'CBSE': 'CBSE', 'Marathi medium': 'मराठी माध्यम'
   };
-  var EN_NAMES = { 'SSC Board': 'State board (SSC)', 'Tulips Montessori Balmandir Gaonbhag': 'Gaonbhag (Tulips Montessori Balmandir)' };
+  var EN_NAMES = { 'SSC Board': 'State board (SSC)', 'Tulips Montessori Balmandir Gaonbhag': 'Montessori Balmandir, Gaonbhag (Marathi medium)' };
   function nm(s) { return LANG === 'mr' ? (MR_NAMES[s] || s) : (EN_NAMES[s] || s); }
   function fill(s, o) { return s.replace(/\{(\w+)\}/g, function (_, k) { return o[k] == null ? '' : o[k]; }); }
   function $(sel, root) { return (root || document).querySelector(sel); }

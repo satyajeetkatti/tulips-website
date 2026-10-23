@@ -124,6 +124,7 @@ main > section.block:nth-of-type(6n+6) .eyebrow { background: var(--blue); }
 .medium li span:first-child::before { content: "✿ "; color: var(--pink); }
 .branch { border: 3px solid var(--sky); border-radius: 26px; }
 .branches .branch:nth-child(2) { border-color: var(--orange); }
+.branches .branch:nth-child(3) { border-color: var(--purple); }
 .panel { border: 3px dashed var(--sky); border-radius: 26px; }
 .table-wrap { border: 3px solid var(--purple); border-radius: 22px; }
 th { background: var(--purple); }
