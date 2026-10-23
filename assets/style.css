@@ -300,15 +300,19 @@ fieldset { border: 0; padding: 0; margin: 0; }
 .foot-bottom { margin-top: 36px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.15); font-size: .88rem; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
 
 /* sticky actions */
-.bottom-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: grid; grid-template-columns: repeat(3, 1fr); background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(0,0,0,.06); padding-bottom: env(safe-area-inset-bottom); }
+.bottom-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: grid; grid-template-columns: repeat(4, 1fr); background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(0,0,0,.06); padding-bottom: env(safe-area-inset-bottom); }
 .bottom-bar a { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 9px 4px; text-decoration: none; font-size: .8rem; font-weight: 600; color: var(--ink); }
 .bottom-bar a svg { width: 22px; height: 22px; }
 .bottom-bar .call svg { color: var(--blue); }
 .bottom-bar .wa svg { color: #1FAF54; }
+.bottom-bar .ig svg { color: #DD2A7B; }
 .bottom-bar .visit { background: var(--pink); color: #fff; }
 .wa-float { display: none; position: fixed; right: 22px; bottom: 22px; z-index: 60; width: 60px; height: 60px; border-radius: 50%; background: #1FAF54; color: #fff; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 .wa-float svg { width: 32px; height: 32px; }
-@media (min-width: 900px) { .bottom-bar { display: none; } .wa-float { display: flex; } }
+.ig-float { display: none; position: fixed; right: 27px; bottom: 94px; z-index: 60; width: 50px; height: 50px; border-radius: 50%; color: #fff; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.2);
+  background: radial-gradient(circle at 30% 107%, #FDF497 0%, #FD5949 45%, #D6249F 60%, #285AEB 90%); }
+.ig-float svg { width: 26px; height: 26px; }
+@media (min-width: 900px) { .bottom-bar { display: none; } .wa-float, .ig-float { display: flex; } }
 
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: none; }
