@@ -109,7 +109,7 @@
   var CFG = cfgEl ? JSON.parse(cfgEl.textContent) : null;
   var cfgReady = [];
   function whenConfig(fn) { if (CFG) fn(CFG); cfgReady.push(fn); }
-  if ($('[data-agecheck]') || $('[data-enquiry]')) {
+  if ($('[data-agecheck]') || $('[data-enquiry]') || $('[data-insta]')) {
     var ctl = ('AbortController' in window) ? new AbortController() : null;
     var timer = setTimeout(function () { if (ctl) ctl.abort(); }, 8000);
     fetch(API, { signal: ctl ? ctl.signal : undefined }).then(function (r) { return r.json(); }).then(function (j) {
@@ -117,6 +117,26 @@
       if (j && j.ok) { CFG = j; cfgReady.forEach(function (fn) { fn(CFG); }); }
     }).catch(function () { /* keep the copy saved when the site was built */ });
   }
+
+  /* ---------- Instagram posts (the app syncs them; see WEBSITE_API.md) ---------- */
+  var insta = $('[data-insta]');
+  if (insta) whenConfig(function (cfg) {
+    var posts = (cfg.instagram && cfg.instagram.posts) || [], grid = $('.insta-grid', insta);
+    if (!posts.length || grid.childNodes.length) return;
+    posts.slice(0, 12).forEach(function (p) {
+      if (!p.image || !/^https:\/\/(www\.)?instagram\.com\//.test(p.permalink || '')) return;
+      var cap = (p.caption || '').replace(/\s+/g, ' ').trim();
+      var short = cap.length > 90 ? cap.slice(0, 88) + '…' : cap;
+      var a = el('a', { href: p.permalink, target: '_blank', rel: 'noopener', 'aria-label': (short || grid.dataset.open) + ' — ' + grid.dataset.open });
+      a.appendChild(el('img', { src: p.image, alt: short || grid.dataset.open, loading: 'lazy', decoding: 'async' }));
+      var kind = p.type === 'VIDEO' ? grid.dataset.video : p.type === 'CAROUSEL_ALBUM' ? grid.dataset.album : '';
+      if (kind) a.appendChild(el('span', { class: 'kind' }, (p.type === 'VIDEO' ? '▶ ' : '❐ ') + kind));
+      var f = el('figure'); f.appendChild(a);
+      if (short) f.appendChild(el('figcaption', null, short));
+      grid.appendChild(f);
+    });
+    if (grid.childNodes.length) insta.hidden = false;
+  });
 
   /* ---------- age rules (same as the app; see WEBSITE_API.md) ---------- */
   function parseDate(s) { var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || ''); return m ? { y: +m[1], m: +m[2], d: +m[3] } : null; }

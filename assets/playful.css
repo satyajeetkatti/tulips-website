@@ -125,6 +125,13 @@ main > section.block:nth-of-type(6n+6) .eyebrow { background: var(--blue); }
 .branch { border: 3px solid var(--sky); border-radius: 26px; }
 .branches .branch:nth-child(2) { border-color: var(--orange); }
 .branches .branch:nth-child(3) { border-color: var(--purple); }
+
+/* Instagram posts on the gallery page */
+.insta-grid figure { border: 3px solid #fff; box-shadow: 0 6px 18px rgba(0,0,0,.12); }
+.insta-grid figure:nth-child(4n+1) { transform: rotate(-1.5deg); }
+.insta-grid figure:nth-child(4n+3) { transform: rotate(1.5deg); }
+.insta-grid a { display: block; color: inherit; }
+.insta-grid .kind { position: absolute; top: 8px; right: 8px; padding: 2px 9px; border-radius: 99px; font-size: .75rem; font-weight: 700; color: #fff; background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF); }
 .panel { border: 3px dashed var(--sky); border-radius: 26px; }
 .table-wrap { border: 3px solid var(--purple); border-radius: 22px; }
 th { background: var(--purple); }
