@@ -145,12 +145,15 @@
   var gal = $('[data-app-photos]');
   if (gal) whenConfig(function (cfg) {
     if (!cfg.photos) return;
+    var appOnly = gal.dataset.mode === 'app';  // the app holds the whole gallery; otherwise its photos go above the built-in ones
     var ok = /^https:\/\/qtqmrfsndcxatbreclzi\.supabase\.co\//;
-    var photos = cfg.photos.filter(function (p) { return ok.test(p.thumb || '') && ok.test(p.full || ''); }).slice(0, 60);
+    var photos = cfg.photos.filter(function (p) { return ok.test(p.thumb || '') && ok.test(p.full || ''); }).slice(0, 200);
+    if (appOnly && !photos.length) return;  // never blank the whole gallery on an empty or failed answer
     var key = photos.map(function (p) { return p.id + p.full; }).join();
     if (gal.dataset.key === key) return;
     gal.dataset.key = key;
-    $all('figure.from-app', gal).forEach(function (f) { f.remove(); });  // a hidden or deleted photo disappears too
+    $all(appOnly ? 'figure' : 'figure.from-app', gal).forEach(function (f) { f.remove(); });  // a hidden or deleted photo disappears too
+    var monthAgo = Date.now() - 30 * 864e5;
     var pressed = $('.filters[data-for="' + gal.id + '"] button[aria-pressed="true"]'), cat = pressed ? pressed.dataset.cat : 'all';
     var first = gal.firstChild;
     photos.forEach(function (p) {
@@ -159,7 +162,7 @@
       var b = el('button', { type: 'button', 'data-full': p.full, 'data-cap': cap, 'aria-label': cap || gal.dataset.photo });
       b.appendChild(el('img', { src: p.thumb, alt: cap || gal.dataset.photo, loading: 'lazy', decoding: 'async' }));
       var f = el('figure', { 'data-cat': p.category || 'events', class: 'from-app' }); f.appendChild(b);
-      f.appendChild(el('span', { class: 'new' }, gal.dataset.new));
+      if (Date.parse(p.added_at) > monthAgo) f.appendChild(el('span', { class: 'new' }, gal.dataset.new));  // "New" for 30 days
       if (cap) f.appendChild(el('figcaption', null, cap));
       if (cat !== 'all' && f.dataset.cat.indexOf(cat) < 0) f.classList.add('hidden');
       gal.insertBefore(f, first);
