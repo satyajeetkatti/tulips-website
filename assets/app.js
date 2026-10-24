@@ -120,9 +120,12 @@
   /* ---------- Instagram posts (the app syncs them; see WEBSITE_API.md) ---------- */
   var insta = $('[data-insta]');
   if (insta) whenConfig(function (cfg) {
-    var posts = (cfg.instagram && cfg.instagram.posts) || [], grid = $('.insta-grid', insta);
-    if (!posts.length || grid.childNodes.length) return;
-    posts.filter(function (p) { return p.image && /^https:\/\/(www\.)?instagram\.com\//.test(p.permalink || ''); }).slice(0, 12).forEach(function (p) {
+    var grid = $('.insta-grid', insta);
+    var posts = ((cfg.instagram && cfg.instagram.posts) || []).filter(function (p) { return p.image && /^https:\/\/(www\.)?instagram\.com\//.test(p.permalink || ''); }).slice(0, 12);
+    var key = posts.map(function (p) { return p.id + p.image; }).join();
+    if (!posts.length || grid.dataset.key === key) return;  // nothing new since the copy built into the page
+    grid.dataset.key = key; grid.textContent = '';
+    posts.forEach(function (p) {
       var cap = (p.caption || '').replace(/\s+/g, ' ').trim();
       var short = cap.length > 90 ? cap.slice(0, 88) + '…' : cap;
       var a = el('a', { href: p.permalink, target: '_blank', rel: 'noopener', 'aria-label': (short || grid.dataset.open) + ' — ' + grid.dataset.open });
@@ -139,16 +142,18 @@
   /* ---------- photos the school approves in the app (see WEBSITE_API.md) ---------- */
   var gal = $('[data-app-photos]');
   if (gal) whenConfig(function (cfg) {
-    if (gal.dataset.loaded) return;
+    if (!cfg.photos) return;
     var ok = /^https:\/\/qtqmrfsndcxatbreclzi\.supabase\.co\//;
-    var photos = (cfg.photos || []).filter(function (p) { return ok.test(p.thumb || '') && ok.test(p.full || ''); });
-    if (!photos.length) return;
-    gal.dataset.loaded = '1';
+    var photos = cfg.photos.filter(function (p) { return ok.test(p.thumb || '') && ok.test(p.full || ''); }).slice(0, 60);
+    var key = photos.map(function (p) { return p.id + p.full; }).join();
+    if (gal.dataset.key === key) return;
+    gal.dataset.key = key;
+    $all('figure.from-app', gal).forEach(function (f) { f.remove(); });  // a hidden or deleted photo disappears too
     var pressed = $('.filters[data-for="' + gal.id + '"] button[aria-pressed="true"]'), cat = pressed ? pressed.dataset.cat : 'all';
     var first = gal.firstChild;
-    photos.slice(0, 60).forEach(function (p) {
+    photos.forEach(function (p) {
       var text = (LANG === 'mr' && p.caption_mr) ? p.caption_mr : (p.caption_en || '');
-      var cap = p.centre ? (text ? text + ' · ' : '') + nm(p.centre) : text;
+      var cap = p.centre ? (text ? text + ' · ' : '') + nm(p.centre).replace(/\s*\(.*\)$/, '') : text;  // short branch name on tiles
       var b = el('button', { type: 'button', 'data-full': p.full, 'data-cap': cap, 'aria-label': cap || gal.dataset.photo });
       b.appendChild(el('img', { src: p.thumb, alt: cap || gal.dataset.photo, loading: 'lazy', decoding: 'async' }));
       var f = el('figure', { 'data-cat': p.category || 'events', class: 'from-app' }); f.appendChild(b);

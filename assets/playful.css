@@ -135,6 +135,8 @@ main > section.block:nth-of-type(6n+6) .eyebrow { background: var(--blue); }
 /* photos approved in the app: small "New" ribbon */
 .gallery figure.from-app .new { position: absolute; top: 8px; left: 8px; padding: 2px 9px; border-radius: 99px; font-size: .72rem; font-weight: 700; color: #fff; background: var(--pink); pointer-events: none; }
 
+@media (max-width: 759px) { #gal figcaption { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; padding-top: 14px; padding-bottom: 0; border-bottom: 8px solid transparent; font-size: .74rem; } }
+
 /* Instagram posts on the gallery page */
 .insta-grid figure { border: 3px solid #fff; box-shadow: 0 6px 18px rgba(0,0,0,.12); }
 .insta-grid figure:nth-child(4n+1) { transform: rotate(-1.5deg); }
