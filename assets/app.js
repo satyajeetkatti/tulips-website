@@ -69,7 +69,9 @@
   });
   var hv = $('.hero video'), hp = $('.hero .pause');
   if (hv) {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { hv.removeAttribute('autoplay'); hv.pause(); }
+    // Plays everywhere, even with Windows "Show animations" off (common on laptops): it is muted and has a pause button.
+    var tryPlay = function () { var p = hv.play(); if (p && p.catch) p.catch(function () { }); };
+    if (hv.paused) tryPlay();
     if (hp) hp.addEventListener('click', function () {
       if (hv.paused) { hv.play(); hp.setAttribute('aria-label', hp.dataset.pause); hp.innerHTML = hp.dataset.iconPause; }
       else { hv.pause(); hp.setAttribute('aria-label', hp.dataset.play); hp.innerHTML = hp.dataset.iconPlay; }
