@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://qtqmrfsndcxatbreclzi.supabase.co; media-src 'self'; connect-src 'self' https://qtqmrfsndcxatbreclzi.supabase.co https://cloudflareinsights.com; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://qtqmrfsndcxatbreclzi.supabase.co; media-src 'self'; connect-src 'self' https://qtqmrfsndcxatbreclzi.supabase.co https://cloudflareinsights.com; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Tulips Pre Primary School, Ichalkaranji — Montessori since 1946</title>
 <meta name="description" content="Montessori preschool in Ichalkaranji since 1946. Playgroup to Sr KG in English medium at Gaonbhag and Sangli Road; शिशु, लहान, मोठा गट in Marathi medium at our Montessori Balmandir, Gaonbhag.">
@@ -20,12 +20,10 @@
 <link rel="icon" href="/assets/logo/favicon-32.png" sizes="32x32">
 <link rel="icon" href="/assets/logo/tulips-icon-light.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/logo/icon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=0e00c405">
-<link rel="stylesheet" href="/assets/playful.css?v=5093d020">
-<link rel="stylesheet" href="/assets/doodles.css?v=bd28c1ad">
+<link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/baloo-2-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="/assets/site.css?v=46a01830">
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Preschool", "name": "Tulips Pre Primary School — Gaonbhag branch", "alternateName": "Shrimant Maisaheb Bavdekar Tulips Pre Primary School", "url": "https://tulipspreprimaryschool.in", "telephone": ["+91 90110 32851", "+91 74997 68838"], "email": "tulipspreprimaryschoolich@gmail.com", "foundingDate": "1946", "founder": {"@type": "Person", "name": "Shrimant Maisaheb Bavdekar"}, "sameAs": ["https://www.instagram.com/tulipspreprimaryschool/"], "address": {"@type": "PostalAddress", "streetAddress": "Near Sundarbaug, Opp. Main Post Office, Mangaldham Road, Ichalkaranji – 416115", "addressLocality": "Ichalkaranji", "addressRegion": "Maharashtra", "postalCode": "416115", "addressCountry": "IN"}}, {"@context": "https://schema.org", "@type": "Preschool", "name": "Tulips Pre Primary School — Sangli Road branch", "alternateName": "Shrimant Maisaheb Bavdekar Tulips Pre Primary School", "url": "https://tulipspreprimaryschool.in", "telephone": ["+91 90110 32851", "+91 74997 68838"], "email": "tulipspreprimaryschoolich@gmail.com", "foundingDate": "1946", "founder": {"@type": "Person", "name": "Shrimant Maisaheb Bavdekar"}, "sameAs": ["https://www.instagram.com/tulipspreprimaryschool/"], "address": {"@type": "PostalAddress", "streetAddress": "Behind Swaraj Motors, Patil Mala, Sangli Road, Ichalkaranji – 416115", "addressLocality": "Ichalkaranji", "addressRegion": "Maharashtra", "postalCode": "416115", "addressCountry": "IN"}}, {"@context": "https://schema.org", "@type": "Preschool", "name": "Tulips Montessori Balmandir, Gaonbhag (Marathi medium)", "alternateName": "Shrimant Maisaheb Bavdekar Tulips Pre Primary School", "url": "https://tulipspreprimaryschool.in", "telephone": ["+91 90110 32851", "+91 74997 68838"], "email": "tulipspreprimaryschoolich@gmail.com", "foundingDate": "1946", "founder": {"@type": "Person", "name": "Shrimant Maisaheb Bavdekar"}, "sameAs": ["https://www.instagram.com/tulipspreprimaryschool/"], "address": {"@type": "PostalAddress", "streetAddress": "Near Sundarbaug, Opp. Main Post Office, Mangaldham Road, Ichalkaranji – 416115", "addressLocality": "Ichalkaranji", "addressRegion": "Maharashtra", "postalCode": "416115", "addressCountry": "IN"}}]</script>
 </head>
 <body>
@@ -48,10 +46,8 @@
 <main id="main">
 
 <section class="hero">
-  <img class="poster" src="/assets/img/gate-1600.webp" alt="" aria-hidden="true">
-  <video autoplay muted loop playsinline preload="metadata" poster="/assets/img/gate-1600.webp" aria-hidden="true">
-    <source src="/assets/video/hero.mp4" type="video/mp4">
-  </video>
+  <img class="poster" src="/assets/img/gate-800.webp" srcset="/assets/img/gate-480.webp 480w, /assets/img/gate-800.webp 800w, /assets/img/gate-1200.webp 1200w, /assets/img/gate-1600.webp 1600w" sizes="100vw" alt="" aria-hidden="true" fetchpriority="high">
+  <video autoplay muted loop playsinline preload="none" aria-hidden="true" data-src="/assets/video/hero.mp4" data-src-phone="/assets/video/hero-phone.mp4"></video>
   <div class="wrap">
     <h1><span class="since">Montessori since 1946</span>A place where childhood is nurtured, not rushed.</h1>
     <p class="tag">Tulips Pre Primary School, Ichalkaranji — English and Marathi medium, Playgroup to Sr KG.</p>
@@ -76,7 +72,7 @@
 </section>
 
 <section class="block"><div class="wrap split">
-  <figure class="founder reveal"><div class="photo"><img src="/assets/img/founder-600.webp" srcset="/assets/img/founder-600.webp 600w, /assets/img/founder-1080.webp 1080w" sizes="(min-width: 900px) 440px, 100vw" alt="Shrimant Maisaheb Bavdekar, our founder, who started a Montessori preschool in Kolhapur in 1946" loading="lazy" decoding="async"></div><figcaption><strong>Shrimant Maisaheb Bavdekar</strong>Our founder · Started a Montessori preschool in Kolhapur in 1946</figcaption></figure>
+  <figure class="founder reveal"><div class="photo"><img src="/assets/img/founder-600.webp" srcset="/assets/img/founder-360.webp 360w, /assets/img/founder-600.webp 600w, /assets/img/founder-800.webp 800w, /assets/img/founder-1080.webp 1080w" sizes="(min-width: 900px) 440px, 100vw" alt="Shrimant Maisaheb Bavdekar, our founder, who started a Montessori preschool in Kolhapur in 1946" loading="lazy" decoding="async"></div><figcaption><strong>Shrimant Maisaheb Bavdekar</strong>Our founder · Started a Montessori preschool in Kolhapur in 1946</figcaption></figure>
   <div class="reveal">
     <p class="eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EB5688" d="M7 3c2 0 3.6 1.4 4.3 3.4L12 9l.7-2.6C13.4 4.4 15 3 17 3c0 4.6-1.4 8-5 8S7 7.6 7 3z"/><path fill="#01845D" d="M11.4 11h1.2c0 3 .6 6.4 1.6 10h-1.4c-.9-3.2-1.4-6.5-1.4-10z"/></svg>Our story</p>
     <h2>Eighty years of Montessori, from Kolhapur to Ichalkaranji</h2>
@@ -87,7 +83,7 @@
 
 <section class="block alt"><div class="wrap">
   <div class="center reveal"><p class="eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EB5688" d="M7 3c2 0 3.6 1.4 4.3 3.4L12 9l.7-2.6C13.4 4.4 15 3 17 3c0 4.6-1.4 8-5 8S7 7.6 7 3z"/><path fill="#01845D" d="M11.4 11h1.2c0 3 .6 6.4 1.6 10h-1.4c-.9-3.2-1.4-6.5-1.4-10z"/></svg>Why Tulips</p><h2>Six reasons parents choose us</h2></div>
-  <div class="cards three mt-2"><article class="card reveal"><img src="/assets/img/materials_child-600.webp" srcset="/assets/img/materials_child-600.webp 600w, /assets/img/materials_child-1080.webp 1080w" sizes="(min-width: 980px) 33vw, (min-width: 640px) 50vw, 100vw" alt="The Montessori way" loading="lazy" decoding="async" style="object-position:center 40%"><div class="body"><h3>The Montessori way</h3><p>Children learn by doing — with their hands and all their senses, at their own pace.</p></div></article><article class="card reveal"><img src="/assets/img/alphabet-800.webp" srcset="/assets/img/alphabet-800.webp 800w, /assets/img/alphabet-1600.webp 1600w" sizes="(min-width: 980px) 33vw, (min-width: 640px) 50vw, 100vw" alt="English with phonics" loading="lazy" decoding="async" style="object-position:center 0%"><div class="body"><h3>English with phonics</h3><p>Letter sounds first, so reading and speaking English comes naturally.</p></div></article><article class="card reveal"><img src="/assets/img/maze-800.webp" srcset="/assets/img/maze-800.webp 800w, /assets/img/maze-1600.webp 1600w" sizes="(min-width: 980px) 33vw, (min-width: 640px) 50vw, 100vw" alt="Play-way and project method" loading="lazy" decoding="async"><div class="body"><h3>Play-way and project method</h3><p>Rhymes, games, floor mats and projects turn every lesson into play.</p></div></article><article class="card reveal"><img src="/assets/img/sand_smile-600.webp" srcset="/assets/img/sand_smile-600.webp 600w, /assets/img/sand_smile-1080.webp 1080w" sizes="(min-width: 980px) 33vw, (min-width: 640px) 50vw, 100vw" alt="Big playground and sandpit" loading="lazy" decoding="async" style="object-position:center 22%"><div class="body"><h3>Big playground and sandpit</h3><p>3,000 sq ft of safe outdoor play for strong, happy bodies.</p></div></article><article class="card reveal"><img src="/assets/img/blocks-800.webp" srcset="/assets/img/blocks-800.webp 800w, /assets/img/blocks-1600.webp 1600w" sizes="(min-width: 980px) 33vw, (min-width: 640px) 50vw, 100vw" alt="Attention for every child" loading="lazy" decoding="async"><div class="body"><h3>Attention for every child</h3><p>A 20:1 student-teacher ratio with trained, experienced teachers.</p></div></article><article class="card reveal"><img src="/assets/img/festival-800.webp" srcset="/assets/img/festival-800.webp 800w, /assets/img/festival-1600.webp 1600w" sizes="(min-width: 980px) 33vw, (min-width: 640px) 50vw, 100vw" alt="Parents as partners" loading="lazy" decoding="async"><div class="body"><h3>Parents as partners</h3><p>Parent participation programmes, celebrations and free workshops for parents.</p></div></article></div>
+  <div class="cards three mt-2"><article class="card reveal"><img src="/assets/img/materials_child-600.webp" srcset="/assets/img/materials_child-360.webp 360w, /assets/img/materials_child-600.webp 600w, /assets/img/materials_child-800.webp 800w, /assets/img/materials_child-1080.webp 1080w" sizes="(min-width: 980px) 33vw, (min-width: 640px) 50vw, 100vw" alt="The Montessori way" loading="lazy" decoding="async" style="object-position:center 40%"><div class="body"><h3>The Montessori way</h3><p>Children learn by doing — with their hands and all their senses, at their own pace.</p></div></article><article class="card reveal"><img src="/assets/img/alphabet-800.webp" srcset="/assets/img/alphabet-480.webp 480w, /assets/img/alphabet-800.webp 800w, /assets/img/alphabet-1200.webp 1200w, /assets/img/alphabet-1600.webp 1600w" sizes="(min-width: 980px) 33vw, (min-width: 640px) 50vw, 100vw" alt="English with phonics" loading="lazy" decoding="async" style="object-position:center 0%"><div class="body"><h3>English with phonics</h3><p>Letter sounds first, so reading and speaking English comes naturally.</p></div></article><article class="card reveal"><img src="/assets/img/maze-800.webp" srcset="/assets/img/maze-480.webp 480w, /assets/img/maze-800.webp 800w, /assets/img/maze-1200.webp 1200w, /assets/img/maze-1600.webp 1600w" sizes="(min-width: 980px) 33vw, (min-width: 640px) 50vw, 100vw" alt="Play-way and project method" loading="lazy" decoding="async"><div class="body"><h3>Play-way and project method</h3><p>Rhymes, games, floor mats and projects turn every lesson into play.</p></div></article><article class="card reveal"><img src="/assets/img/sand_smile-600.webp" srcset="/assets/img/sand_smile-360.webp 360w, /assets/img/sand_smile-600.webp 600w, /assets/img/sand_smile-800.webp 800w, /assets/img/sand_smile-1080.webp 1080w" sizes="(min-width: 980px) 33vw, (min-width: 640px) 50vw, 100vw" alt="Big playground and sandpit" loading="lazy" decoding="async" style="object-position:center 22%"><div class="body"><h3>Big playground and sandpit</h3><p>3,000 sq ft of safe outdoor play for strong, happy bodies.</p></div></article><article class="card reveal"><img src="/assets/img/blocks-800.webp" srcset="/assets/img/blocks-480.webp 480w, /assets/img/blocks-800.webp 800w, /assets/img/blocks-1200.webp 1200w, /assets/img/blocks-1600.webp 1600w" sizes="(min-width: 980px) 33vw, (min-width: 640px) 50vw, 100vw" alt="Attention for every child" loading="lazy" decoding="async"><div class="body"><h3>Attention for every child</h3><p>A 20:1 student-teacher ratio with trained, experienced teachers.</p></div></article><article class="card reveal"><img src="/assets/img/festival-800.webp" srcset="/assets/img/festival-480.webp 480w, /assets/img/festival-800.webp 800w, /assets/img/festival-1200.webp 1200w, /assets/img/festival-1600.webp 1600w" sizes="(min-width: 980px) 33vw, (min-width: 640px) 50vw, 100vw" alt="Parents as partners" loading="lazy" decoding="async"><div class="body"><h3>Parents as partners</h3><p>Parent participation programmes, celebrations and free workshops for parents.</p></div></article></div>
 </div></section>
 
 <section class="block"><div class="wrap">
@@ -112,7 +108,7 @@
   <div class="center reveal"><p class="eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EB5688" d="M7 3c2 0 3.6 1.4 4.3 3.4L12 9l.7-2.6C13.4 4.4 15 3 17 3c0 4.6-1.4 8-5 8S7 7.6 7 3z"/><path fill="#01845D" d="M11.4 11h1.2c0 3 .6 6.4 1.6 10h-1.4c-.9-3.2-1.4-6.5-1.4-10z"/></svg>Our branches</p><h2>Three branches in Ichalkaranji</h2></div>
   <div class="mt-2"><div class="branches">
   <article class="branch reveal">
-    <img src="/assets/img/gate-800.webp" srcset="/assets/img/gate-800.webp 800w, /assets/img/gate-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 100vw" alt="Children running in through the Gaonbhag gate" loading="lazy" decoding="async">
+    <img src="/assets/img/gate-800.webp" srcset="/assets/img/gate-480.webp 480w, /assets/img/gate-800.webp 800w, /assets/img/gate-1200.webp 1200w, /assets/img/gate-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 100vw" alt="Children running in through the Gaonbhag gate" loading="lazy" decoding="async">
     <div class="body">
       <h3>Gaonbhag branch</h3>
       <dl>
@@ -128,7 +124,7 @@
     </div>
   </article>
   <article class="branch reveal">
-    <img src="/assets/img/materials-600.webp" srcset="/assets/img/materials-600.webp 600w, /assets/img/materials-1080.webp 1080w" sizes="(min-width: 900px) 50vw, 100vw" alt="Montessori materials at the Gaonbhag school" loading="lazy" decoding="async">
+    <img src="/assets/img/materials-600.webp" srcset="/assets/img/materials-360.webp 360w, /assets/img/materials-600.webp 600w, /assets/img/materials-800.webp 800w, /assets/img/materials-1080.webp 1080w" sizes="(min-width: 900px) 50vw, 100vw" alt="Montessori materials at the Gaonbhag school" loading="lazy" decoding="async">
     <div class="body">
       <h3>Montessori Balmandir, Gaonbhag</h3>
       <dl>
@@ -144,7 +140,7 @@
     </div>
   </article>
   <article class="branch reveal">
-    <img src="/assets/img/sr_court-600.webp" srcset="/assets/img/sr_court-600.webp 600w, /assets/img/sr_court-1080.webp 1080w" sizes="(min-width: 900px) 50vw, 100vw" alt="The courtyard at the Sangli Road branch" loading="lazy" decoding="async">
+    <img src="/assets/img/sr_court-600.webp" srcset="/assets/img/sr_court-360.webp 360w, /assets/img/sr_court-600.webp 600w, /assets/img/sr_court-800.webp 800w, /assets/img/sr_court-1080.webp 1080w" sizes="(min-width: 900px) 50vw, 100vw" alt="The courtyard at the Sangli Road branch" loading="lazy" decoding="async">
     <div class="body">
       <h3>Sangli Road branch</h3>
       <dl>
@@ -251,7 +247,7 @@
   <a class="ig" href="https://www.instagram.com/tulipspreprimaryschool/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a>
   <a class="visit" href="/admissions/?visit=1#enquire"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book a visit</a>
 </nav>
-<script src="/assets/app.js?v=70cd4403" defer></script>
+<script src="/assets/app.js?v=3b404a3a" defer></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "e362755279c845a5bdea97bf834641a3"}'></script>
 </body>
 </html>
