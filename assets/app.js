@@ -123,7 +123,7 @@
   var insta = $('[data-insta]');
   if (insta) whenConfig(function (cfg) {
     var grid = $('.insta-grid', insta);
-    var posts = ((cfg.instagram && cfg.instagram.posts) || []).filter(function (p) { return p.image && /^https:\/\/(www\.)?instagram\.com\//.test(p.permalink || ''); }).slice(0, 12);
+    var posts = ((cfg.instagram && cfg.instagram.posts) || []).filter(function (p) { return /^https:\/\/qtqmrfsndcxatbreclzi\.supabase\.co\//.test(p.image || '') && /^https:\/\/(www\.)?instagram\.com\//.test(p.permalink || ''); }).slice(0, 12);
     var key = posts.map(function (p) { return p.id + p.image; }).join();
     if (!posts.length || grid.dataset.key === key) return;  // nothing new since the copy built into the page
     grid.dataset.key = key; grid.textContent = '';
