@@ -45,6 +45,14 @@
       badPhone: '१० अंकी मोबाइल क्रमांक भरा.', badName: 'हे नाव भरा.', badBranch: 'शाखा निवडा.', badYear: 'शैक्षणिक वर्ष निवडा.',
       failed: 'क्षमस्व, काहीतरी चुकले. कृपया +९१ ९०११० ३२८५१ वर फोन करा किंवा +९१ ७४९९७ ६८८३८ वर व्हॉट्सअ‍ॅप करा.',
       offline: 'शाळेच्या यंत्रणेशी संपर्क झाला नाही. इंटरनेट तपासा किंवा +९१ ९०११० ३२८५१ वर फोन करा.',
+      codes: {  // the app's error codes, in Marathi (see WEBSITE_API.md)
+        too_many_school: 'आज आम्हाला खूप चौकशी आल्या आहेत. कृपया शाळेला +९१ ९०११० ३२८५१ वर फोन करा.',
+        too_many_phone: 'या नंबरवरून आज ३ चौकशी आल्या आहेत. शाळा तुम्हाला फोन करेल.',
+        too_many_ip: 'या कनेक्शनवरून खूप चौकशी आल्या आहेत. थोड्या वेळाने प्रयत्न करा किंवा शाळेला फोन करा.',
+        slot_taken: 'माफ करा, ही वेळ नुकतीच बुक झाली. कृपया दुसरी वेळ निवडा.',
+        bad_phone: '१० अंकी भारतीय मोबाईल नंबर लिहा.',
+        bad_visit: 'यादीतील भेटीची वेळ निवडा.'
+      },
       at: ''
     }
   }[LANG];
@@ -372,7 +380,7 @@
             }
           } else {
             out.className = 'result show bad';
-            out.appendChild(el('p', null, (j && j.error) || T.failed));
+            out.appendChild(el('p', null, (j && T.codes && T.codes[j.code]) || (j && j.error) || T.failed));
             if (j && j.code === 'slot_taken') fetch(API).then(function (r) { return r.json(); }).then(function (c) { if (c.ok) { CFG = c; syncSlots(CFG); } }).catch(function () { });
           }
           out.scrollIntoView({ behavior: 'smooth', block: 'center' });
