@@ -1,22 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
-    <title>Admission form · प्रवेश अर्ज | Tulips Pre-Primary School</title>
-    <meta name="description" content="Online admission form of Tulips Pre-Primary School, Ichalkaranji." />
-    <meta name="robots" content="noindex" />
-    <meta name="theme-color" content="#FFF8F1" />
-    <link rel="icon" href="/admission/icon.png" />
-    <style>
-      html, body { height: 100%; margin: 0; background-color: #FFF8F1; }
-      body { overflow: hidden; }
-      #root { display: flex; height: 100%; flex: 1; }
-    </style>
-  </head>
-  <body>
-    <noscript>Please turn on JavaScript to fill the admission form. · प्रवेश अर्ज भरण्यासाठी JavaScript चालू करा.</noscript>
-    <div id="root"></div>
-    <script src="/admission/_expo/static/js/web/entry-d66e63e0d29c40e27af0cb25768c40c5.js" defer></script>
-  </body>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-vEDIO6TNOQClhhZnIemVIlheyPYOUKoVvQ/1IyFVgaY='; style-src 'self' 'unsafe-inline'; font-src 'self' https://tulipspreprimaryschool.in; img-src 'self' data: blob: https://tulipspreprimaryschool.in https://qtqmrfsndcxatbreclzi.supabase.co; connect-src 'self' blob: https://qtqmrfsndcxatbreclzi.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<title>Admission form · प्रवेश अर्ज | Tulips Pre-Primary School</title>
+<meta name="description" content="Online admission form of Tulips Pre-Primary School, Ichalkaranji." />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#FFF8F1" />
+<link rel="icon" href="/admission/icon.png" />
+<style>html,body{height:100%;margin:0;background:#FFF4C2}
+
+@font-face{font-family:'Poppins';font-style:normal;font-display:swap;font-weight:400;src:url(/assets/fonts/poppins-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Poppins';font-style:normal;font-display:swap;font-weight:400;src:url(/assets/fonts/poppins-devanagari-400-normal.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}
+@font-face{font-family:'Poppins';font-style:normal;font-display:swap;font-weight:500;src:url(/assets/fonts/poppins-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Poppins';font-style:normal;font-display:swap;font-weight:500;src:url(/assets/fonts/poppins-devanagari-500-normal.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}
+@font-face{font-family:'Poppins';font-style:normal;font-display:swap;font-weight:600;src:url(/assets/fonts/poppins-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Poppins';font-style:normal;font-display:swap;font-weight:600;src:url(/assets/fonts/poppins-devanagari-600-normal.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}
+@font-face{font-family:'Poppins';font-style:normal;font-display:swap;font-weight:700;src:url(/assets/fonts/poppins-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Poppins';font-style:normal;font-display:swap;font-weight:700;src:url(/assets/fonts/poppins-devanagari-700-normal.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}
+@font-face{font-family:'Baloo 2';font-style:normal;font-display:swap;font-weight:600;src:url(/assets/fonts/baloo-2-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Baloo 2';font-style:normal;font-display:swap;font-weight:600;src:url(/assets/fonts/baloo-2-devanagari-600-normal.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}
+@font-face{font-family:'Baloo 2';font-style:normal;font-display:swap;font-weight:700;src:url(/assets/fonts/baloo-2-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Baloo 2';font-style:normal;font-display:swap;font-weight:700;src:url(/assets/fonts/baloo-2-devanagari-700-normal.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}
+@font-face{font-family:'Baloo 2';font-style:normal;font-display:swap;font-weight:800;src:url(/assets/fonts/baloo-2-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Baloo 2';font-style:normal;font-display:swap;font-weight:800;src:url(/assets/fonts/baloo-2-devanagari-800-normal.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}
+@font-face{font-family:'Mukta';font-style:normal;font-display:swap;font-weight:400;src:url(/assets/fonts/mukta-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Mukta';font-style:normal;font-display:swap;font-weight:400;src:url(/assets/fonts/mukta-devanagari-400-normal.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}
+@font-face{font-family:'Mukta';font-style:normal;font-display:swap;font-weight:500;src:url(/assets/fonts/mukta-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Mukta';font-style:normal;font-display:swap;font-weight:500;src:url(/assets/fonts/mukta-devanagari-500-normal.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}
+@font-face{font-family:'Mukta';font-style:normal;font-display:swap;font-weight:600;src:url(/assets/fonts/mukta-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Mukta';font-style:normal;font-display:swap;font-weight:600;src:url(/assets/fonts/mukta-devanagari-600-normal.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}
+@font-face{font-family:'Mukta';font-style:normal;font-display:swap;font-weight:700;src:url(/assets/fonts/mukta-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Mukta';font-style:normal;font-display:swap;font-weight:700;src:url(/assets/fonts/mukta-devanagari-700-normal.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B09}
+.tw{--green:#01845D;--green-dark:#01694A;--green-deep:#0B4A37;--green-soft:#E6F4EE;--pink:#EB5688;--pink-dark:#D23C70;--pink-soft:#FDEBF1;
+ --blue:#2857A4;--ink:#373536;--ink-soft:#6A6467;--line:#EADFCF;--sun:#FFC233;--orange:#FF8A3D;--sky:#3DB8F0;--purple:#8E63D8;--mint:#2FCB97;
+ --font:'Poppins','Mukta','Noto Sans Devanagari',system-ui,sans-serif;--head:'Baloo 2','Poppins','Mukta',system-ui,sans-serif;
+ position:fixed;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;background:#FFF4C2;color:var(--ink);font:400 16px/1.65 var(--font);}
+.tw *{box-sizing:border-box}
+.tw .mr{font-family:'Mukta','Poppins',sans-serif}
+.tw h1,.tw h2,.tw h3{font-family:var(--head);line-height:1.2;margin:0 0 .4em;color:var(--ink)}
+.tw p{margin:0 0 .8em}
+.tw a{color:var(--blue)}
+.tw .wrap{max-width:760px;margin:0 auto;padding:0 16px}
+/* header: logo, call, rainbow ribbon */
+.tw .hd{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);backdrop-filter:blur(8px)}
+.tw .hd .wrap{display:flex;align-items:center;gap:12px;min-height:64px}
+.tw .hd img{height:38px;width:auto;display:block}
+.tw .hd .sp{flex:1}
+.tw .hd .pill{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--line);font:600 .9rem var(--font);color:var(--ink);text-decoration:none;background:#fff}
+.tw .hd::after{content:"";display:block;height:6px;background:linear-gradient(90deg,var(--pink) 0 16.6%,var(--orange) 0 33.3%,var(--sun) 0 50%,var(--mint) 0 66.6%,var(--sky) 0 83.3%,var(--purple) 0)}
+/* banner */
+.tw .hero{position:relative;color:#fff;overflow:hidden;background:linear-gradient(120deg,var(--pink) 0%,var(--purple) 55%,var(--sky) 100%)}
+.tw .hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.85;background:
+ url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20fill%3D'%23ffffff'%20d%3D'M12%201.5l3.1%206.4%207%20.9-5.1%204.9%201.3%207L12%2017.3l-6.3%203.4%201.3-7L1.9%208.8l7-.9z'%2F%3E%3C%2Fsvg%3E") left 4% top 22px/24px no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2020%2020'%3E%3Ccircle%20cx%3D'10'%20cy%3D'10'%20r%3D'7'%20fill%3D'none'%20stroke%3D'%23ffffff'%20stroke-width%3D'3'%2F%3E%3C%2Fsvg%3E") left 30% bottom 48px/20px no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20fill%3D'%23ffffff'%20d%3D'M12%201.5l3.1%206.4%207%20.9-5.1%204.9%201.3%207L12%2017.3l-6.3%203.4%201.3-7L1.9%208.8l7-.9z'%2F%3E%3C%2Fsvg%3E") right 7% top 26px/30px no-repeat,
+ url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2020%2020'%3E%3Ccircle%20cx%3D'10'%20cy%3D'10'%20r%3D'7'%20fill%3D'none'%20stroke%3D'%23ffffff'%20stroke-width%3D'3'%2F%3E%3C%2Fsvg%3E") right 24% top 18px/16px no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20fill%3D'%23ffffff'%20d%3D'M12%201.5l3.1%206.4%207%20.9-5.1%204.9%201.3%207L12%2017.3l-6.3%203.4%201.3-7L1.9%208.8l7-.9z'%2F%3E%3C%2Fsvg%3E") right 3% bottom 56px/18px no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2064%2036'%3E%3Cpath%20fill%3D'%23ffffff'%20stroke%3D'%233DB8F0'%20stroke-width%3D'2.5'%20d%3D'M16%2034h34a12%2012%200%200%200%200-24%2016%2016%200%200%200-30-2A13%2013%200%200%200%2016%2034z'%2F%3E%3C%2Fsvg%3E") right 12% bottom 40px/70px no-repeat}
+.tw .hero .wrap{position:relative;z-index:2;padding-top:26px;padding-bottom:64px;text-align:center}
+.tw .hero .badge{display:inline-block;background:#fff;border-radius:24px;padding:12px 18px;box-shadow:0 6px 0 rgba(0,0,0,.12);transform:rotate(-1.2deg)}
+.tw .hero .badge img{display:block;width:min(300px,72vw);height:auto}
+.tw .hero h1{color:#fff;font-size:clamp(1.9rem,7vw,2.6rem);font-weight:800;margin:18px 0 2px;text-shadow:0 3px 0 rgba(0,0,0,.15)}
+.tw .hero p{margin:0;opacity:.95;font-size:1.02rem}
+/* the form's coloured section with a wavy top */
+.tw .sec{position:relative;background:var(--sec,#BFE8FF);padding:34px 0 46px}
+.tw .sec::before{content:"";position:absolute;left:0;right:0;top:-34px;height:36px;background:var(--sec,#BFE8FF);-webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%2036'%20preserveAspectRatio%3D'none'%3E%3Cpath%20d%3D'M0%2036V18C100%200%20200%200%20300%2018S500%2036%20600%2018%20800%200%20900%2018%201100%2036%201200%2018V36Z'%2F%3E%3C%2Fsvg%3E") center/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201200%2036'%20preserveAspectRatio%3D'none'%3E%3Cpath%20d%3D'M0%2036V18C100%200%20200%200%20300%2018S500%2036%20600%2018%20800%200%20900%2018%201100%2036%201200%2018V36Z'%2F%3E%3C%2Fsvg%3E") center/100% 100% no-repeat}
+.tw .sec::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.45;background:
+ url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20fill%3D'%23FFC233'%20d%3D'M12%201.5l3.1%206.4%207%20.9-5.1%204.9%201.3%207L12%2017.3l-6.3%203.4%201.3-7L1.9%208.8l7-.9z'%2F%3E%3C%2Fsvg%3E") left 3% top 20px/22px no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2040%2040'%3E%3Ccircle%20cx%3D'6'%20cy%3D'6'%20r%3D'5'%20fill%3D'%23EB5688'%2F%3E%3Ccircle%20cx%3D'30'%20cy%3D'14'%20r%3D'4'%20fill%3D'%232FCB97'%2F%3E%3Ccircle%20cx%3D'14'%20cy%3D'32'%20r%3D'3.5'%20fill%3D'%238E63D8'%2F%3E%3C%2Fsvg%3E") right 4% top 14px/34px no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2080%2020'%3E%3Cpath%20fill%3D'none'%20stroke%3D'%23FF8A3D'%20stroke-width%3D'4'%20stroke-linecap%3D'round'%20d%3D'M3%2010q8-12%2016%200t16%200%2016%200%2016%200%2010%200'%2F%3E%3C%2Fsvg%3E") left 4% bottom 18px/52px no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20fill%3D'%23EB5688'%20d%3D'M12%201.5l3.1%206.4%207%20.9-5.1%204.9%201.3%207L12%2017.3l-6.3%203.4%201.3-7L1.9%208.8l7-.9z'%2F%3E%3C%2Fsvg%3E") right 5% bottom 22px/18px no-repeat}
+.tw .sec>.wrap{position:relative;z-index:1}
+.tw .s1{--sec:#FFEE9E;--ink2:#A86B00}.tw .s2{--sec:#BFE8FF;--ink2:#1366A0}.tw .s3{--sec:#FFCFE1;--ink2:#B8235A}
+.tw .s4{--sec:#BDF2D9;--ink2:#0E7350}.tw .s5{--sec:#DCCBFF;--ink2:#5B37A0}.tw .s6{--sec:#FFD5B3;--ink2:#B4510F}
+.tw .eyebrow{display:inline-block;background:var(--pink);color:#fff;font:700 .85rem var(--head);padding:5px 14px 4px;border-radius:999px;transform:rotate(-2deg);box-shadow:0 3px 0 rgba(0,0,0,.12);letter-spacing:.04em;margin-bottom:8px}
+.tw .title{text-align:center;margin-bottom:18px}
+.tw .title h2{font-size:clamp(1.6rem,6vw,2.2rem);font-weight:800;color:var(--ink2,#1366A0);margin:0}
+.tw .title h2::after{content:"";display:block;width:110px;height:13px;margin:8px auto 0;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20120%2014'%3E%3Cpath%20fill%3D'none'%20stroke%3D'%23FFC233'%20stroke-width%3D'5'%20stroke-linecap%3D'round'%20d%3D'M4%208q10-8%2020%200t20%200%2020%200%2020%200%2020%200%2012%200'%2F%3E%3C%2Fsvg%3E") center/contain no-repeat}
+.tw .title p{color:var(--ink-soft);margin:6px 0 0;font-size:.95rem}
+/* progress: 5 numbered bubbles in rainbow colours */
+.tw .steps{display:flex;align-items:flex-start;justify-content:space-between;gap:4px;margin:0 0 14px;position:relative}
+.tw .steps::before{content:"";position:absolute;left:8%;right:8%;top:19px;height:4px;border-radius:2px;background:rgba(255,255,255,.8)}
+.tw .stp{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;background:none;border:0;padding:0;font:600 .72rem/1.2 var(--font);color:var(--ink-soft);cursor:pointer;position:relative;z-index:1;text-align:center}
+.tw .stp:disabled{cursor:default}
+.tw .stp .n{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font:800 1.05rem var(--head);color:#fff;background:#fff;color:#B7AEA8;border:3px solid #fff;box-shadow:0 3px 0 rgba(0,0,0,.1)}
+.tw .stp.open .n{color:#fff;background:var(--c)}
+.tw .stp.now .n{transform:scale(1.18);box-shadow:0 0 0 4px rgba(255,255,255,.9),0 4px 0 rgba(0,0,0,.15)}
+.tw .stp.now{color:var(--ink)}
+.tw .where{text-align:center;margin-bottom:18px}
+.tw .where b{font:800 1.25rem var(--head);color:var(--ink2,#1366A0)}
+.tw .where small{display:block;color:var(--ink-soft);font-size:.88rem}
+/* cards */
+.tw .card{background:#fff;border:3px solid var(--bc,var(--pink));border-radius:26px;padding:20px 18px;margin:0 0 18px;box-shadow:0 6px 0 rgba(0,0,0,.06)}
+.tw .card h3{font-size:1.3rem;font-weight:800;color:var(--hc,var(--pink-dark));margin-bottom:12px}
+.tw .c1{--bc:var(--pink);--hc:var(--pink-dark)}.tw .c2{--bc:var(--orange);--hc:#D9681F}.tw .c3{--bc:var(--sky);--hc:#1A86BF}
+.tw .c4{--bc:var(--green);--hc:var(--green-dark)}.tw .c5{--bc:var(--purple);--hc:#6C45B8}.tw .c6{--bc:var(--sun);--hc:#B07A00}
+.tw .panel{background:#fff;border:3px dashed var(--sky);border-radius:26px;padding:22px 18px;margin-bottom:18px}
+.tw .grid{display:grid;gap:16px}
+@media (min-width:640px){.tw .grid{grid-template-columns:1fr 1fr}.tw .grid .full{grid-column:1/-1}}
+/* fields, as on the website */
+.tw label.lb,.tw .lb{display:block;font-weight:600;font-size:.95rem;margin-bottom:6px;color:var(--ink)}
+.tw .req{color:var(--pink-dark)}
+.tw .hint{display:block;font-weight:400;color:var(--ink-soft);font-size:.85rem;margin-top:5px}
+.tw input[type=text],.tw input[type=tel],.tw input[type=email],.tw input[type=date],.tw input[type=number],.tw select,.tw textarea{width:100%;font:400 1rem var(--font);color:var(--ink);padding:12px 14px;border:1.5px solid #D9CDBB;border-radius:12px;background:#fff;min-height:50px;-webkit-appearance:none;appearance:none}
+.tw select{background:#fff url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20fill%3D'none'%20stroke%3D'%236A6467'%20stroke-width%3D'2.5'%20stroke-linecap%3D'round'%20d%3D'M6%209l6%206%206-6'%2F%3E%3C%2Fsvg%3E") right 12px center/18px no-repeat;padding-right:40px}
+.tw textarea{min-height:96px;resize:vertical}
+.tw input:focus,.tw select:focus,.tw textarea:focus,.tw button:focus-visible,.tw a:focus-visible{outline:3px solid rgba(40,87,164,.35);outline-offset:2px;border-color:var(--blue)}
+.tw .choice{display:flex;flex-wrap:wrap;gap:10px}
+.tw .choice label{display:inline-flex;align-items:center;gap:8px;font-weight:500;padding:10px 16px;border:1.5px solid #D9CDBB;border-radius:999px;cursor:pointer;margin:0;background:#fff;font-size:.95rem}
+.tw .choice input{accent-color:var(--green);width:18px;height:18px;margin:0}
+.tw .choice label.on{border-color:var(--green);background:var(--green-soft)}
+.tw .check{display:flex;gap:10px;align-items:flex-start;font-weight:500;cursor:pointer}
+.tw .check input{width:22px;height:22px;margin-top:3px;accent-color:var(--pink);flex:none}
+.tw .locked{opacity:.55;pointer-events:none}
+.tw .flag{border-left:4px solid #D93025;padding-left:10px}
+.tw .flag>.fl{color:#B3261E;font-weight:700;font-size:.85rem;margin-bottom:4px}
+/* buttons: chunky and bouncy */
+.tw .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:18px;font:700 1.05rem/1.2 var(--head);text-decoration:none;border:2px solid transparent;cursor:pointer;min-height:52px;box-shadow:0 5px 0 rgba(0,0,0,.18);transition:transform .12s,box-shadow .12s,background .15s;text-align:center}
+.tw .btn:hover{transform:translateY(-2px);box-shadow:0 7px 0 rgba(0,0,0,.18)}
+.tw .btn:active{transform:translateY(3px);box-shadow:0 2px 0 rgba(0,0,0,.18)}
+.tw .btn:disabled{opacity:.6;cursor:default;transform:none}
+.tw .btn-green{background:var(--green);color:#fff}.tw .btn-green:hover{background:var(--green-dark)}
+.tw .btn-pink{background:var(--pink);color:#fff}.tw .btn-pink:hover{background:var(--pink-dark)}
+.tw .btn-outline{background:#fff;color:var(--green);border:3px solid var(--green)}
+.tw .btn-wa{background:#1FAF54;color:#fff}
+.tw .btn-small{min-height:42px;padding:8px 14px;font-size:.95rem;border-radius:14px;box-shadow:0 3px 0 rgba(0,0,0,.15)}
+.tw .btn-link{background:none;border:0;box-shadow:none;color:var(--ink);text-decoration:underline;font:600 .95rem var(--font);min-height:44px;cursor:pointer}
+.tw .full-w{width:100%}
+.tw .row{display:flex;gap:10px;align-items:center}
+.tw .row>*{flex:1}
+.tw .nav{display:grid;gap:10px;margin-top:6px}
+.tw .saved{text-align:center;font-size:.88rem;color:var(--ink-soft);min-height:1.3em}
+.tw .saved.ok{color:var(--green-dark);font-weight:600}.tw .saved.bad{color:#B3261E;font-weight:600}
+/* notes */
+.tw .note{border-radius:18px;padding:14px 16px;margin:0 0 16px;border:2px solid}
+.tw .note b{display:block;font-family:var(--head);font-size:1.08rem}
+.tw .warn{background:#FFF3C9;border-color:var(--sun)}.tw .good{background:#DCF8EC;border-color:var(--mint)}.tw .bad{background:#FDEBF1;border-color:var(--pink)}
+.tw .fee{background:#FFF3C9;border:2px dashed var(--orange);border-radius:16px;padding:12px 14px}
+.tw .fee b{font:800 1.15rem var(--head);color:#B4510F}
+.tw .fee small{display:block;color:var(--ink-soft)}
+/* documents */
+.tw .doc{border-top:1.5px dashed var(--line);padding:14px 0}
+.tw .doc:first-of-type{border-top:0;padding-top:0}
+.tw .doc .st{font-size:.88rem;color:var(--ink-soft)}
+.tw .doc .st.ok{color:var(--green-dark);font-weight:600}.tw .doc .st.err{color:#B3261E;font-weight:600}
+.tw .doc .pv{display:block;max-width:160px;max-height:160px;border-radius:14px;border:4px solid #fff;box-shadow:0 4px 0 rgba(255,194,51,.6);margin:8px 0}
+.tw .doc .bts{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+/* review */
+.tw .rv{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;font-size:.88rem}
+.tw .rv dt{color:var(--ink-soft)}.tw .rv dd{margin:0;color:var(--ink);font-weight:500;word-break:break-word}
+.tw .head-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.tw .head-row h3{margin:0}
+.tw .miss{color:#B3261E;font-size:.85rem;margin-bottom:8px}
+/* sheet */
+.tw .modal{position:fixed;inset:0;z-index:50;background:rgba(55,53,54,.45);display:flex;align-items:flex-end;justify-content:center}
+@media (min-width:640px){.tw .modal{align-items:center}}
+.tw .modal .box{background:#fff;width:100%;max-width:520px;border-radius:26px 26px 0 0;padding:22px 18px 26px;border-top:6px solid var(--mint);max-height:90vh;overflow:auto}
+@media (min-width:640px){.tw .modal .box{border-radius:26px}}
+.tw .linkbox{background:#F7F2EA;border-radius:12px;padding:10px 12px;font-size:.85rem;word-break:break-all;margin:10px 0}
+/* footer */
+.tw .ft{background:var(--green-deep);color:#E3EFEA;padding:26px 0 30px;font-size:.92rem;text-align:center}
+.tw .ft a{color:#fff}
+.tw .ft h3{color:var(--sun);font-size:1.05rem;margin-bottom:6px}
+.tw .spin{width:34px;height:34px;border-radius:50%;border:4px solid rgba(255,255,255,.6);border-top-color:var(--pink);animation:twspin 1s linear infinite;margin:40px auto}
+@keyframes twspin{to{transform:rotate(360deg)}}
+/* the five steps on the start page */
+.tw .five{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:8px}
+.tw .five li{display:flex;align-items:center;gap:10px;font-weight:600}
+.tw .five .n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:#fff;font:800 .95rem var(--head);flex:none;box-shadow:0 3px 0 rgba(0,0,0,.12)}
+/* documents to keep ready (owner 12 Nov: big, like the five steps) and the "I have them" tick */
+.tw .need{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:12px}
+.tw .need li{display:flex;align-items:flex-start;gap:12px;font-weight:600;font-size:1.08rem;line-height:1.4}
+.tw .need .n{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font:800 1rem var(--head);flex:none;box-shadow:0 3px 0 rgba(0,0,0,.12);margin-top:1px}
+.tw .need small{display:block;font-weight:500;font-size:.9rem;color:var(--ink-soft)}
+.tw .gate{background:var(--green-soft);border:2px solid var(--green);border-radius:18px;padding:14px 14px;margin:4px 0 10px}
+.tw .gate .check{font-size:1rem}
+.tw [hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){.tw .btn,.tw .spin{transition:none;animation:none}}
+</style>
+</head>
+<body>
+<noscript><p style="padding:16px;font:16px sans-serif">Please turn on JavaScript to fill the admission form. · प्रवेश अर्ज भरण्यासाठी JavaScript चालू करा.</p></noscript>
+<link rel="preload" as="image" href="/assets/logo/tulips-mark-light.svg"/><link rel="preload" as="image" href="/assets/logo/tulips-full-light.svg"/><div id="w-page"><div class="tw" id="tw-scroll"><header class="hd"><div class="wrap"><a href="https://tulipspreprimaryschool.in/" aria-label="Tulips Pre Primary School — website"><img src="/assets/logo/tulips-mark-light.svg" alt="Tulips" width="112" height="38"/></a><span class="sp"></span><a class="pill" href="tel:+917499768838">📞 Call</a><a class="pill" href="https://wa.me/917499768838" target="_blank" rel="noopener">WhatsApp</a></div></header><section class="hero"><div class="wrap"><div class="badge"><img src="/assets/logo/tulips-full-light.svg" alt="Tulips Pre Primary School, Ichalkaranji · मॉंटेसोरी बालमंदिर" width="300" height="136"/></div><h1>Admission form · <span class="mr">प्रवेश अर्ज</span></h1><p>Tulips Pre-Primary School, Ichalkaranji</p></div></section><main class="sec s1"><div class="wrap"><div id="w-welcome"><div class="title"><span class="eyebrow">Admissions open · प्रवेश सुरू</span><h2>Apply online · ऑनलाइन अर्ज</h2></div><section class="panel"><p>Fill in your child&#x27;s details and upload the documents. You can save and come back later. · मुलाची माहिती भरा आणि कागदपत्रे अपलोड करा. तुम्ही मध्येच थांबून नंतर पुढे भरू शकता.</p><ol class="five"><li><span class="n" style="background:#EB5688">1</span>Admission &amp; child · प्रवेश व मुलाची माहिती</li><li><span class="n" style="background:#FF8A3D">2</span>Parent &amp; address · पालक व पत्ता</li><li><span class="n" style="background:#2FCB97">3</span>Health &amp; emergency · आरोग्य व आपत्कालीन संपर्क</li><li><span class="n" style="background:#3DB8F0">4</span>Documents · कागदपत्रे</li><li><span class="n" style="background:#8E63D8">5</span>Review &amp; pay · तपासा व शुल्क भरा</li></ol><div id="w-fee" class="fee" style="margin-bottom:12px" hidden=""></div><div id="w-closed" class="note warn" hidden=""></div><div id="w-actions" class="nav"><button type="button" id="w-continue" class="btn btn-green full-w" hidden="">Continue my form · माझा अर्ज पुढे भरा →</button><button type="button" id="w-new" class="btn btn-pink full-w">Start the admission form · अर्ज भरायला सुरुवात करा →</button></div></section></div><div id="w-docs" hidden=""><div class="title"><span class="eyebrow">Before you start · सुरू करण्यापूर्वी</span><h2>Keep these documents ready · ही कागदपत्रे तयार ठेवा</h2></div><section class="panel"><ol class="need"><li><span class="n" style="background:#EB5688">1</span><span>Student&#x27;s Aadhaar card · मुलाचे आधार कार्ड<small>if available · असल्यास</small></span></li><li><span class="n" style="background:#FF8A3D">2</span><span>Student&#x27;s clear passport-size photo · मुलाचा स्पष्ट पासपोर्ट साइज फोटो<small>light background, face clearly visible · फिकट पार्श्वभूमी, चेहरा स्पष्ट</small></span></li><li><span class="n" style="background:#2FCB97">3</span><span>Student&#x27;s birth certificate · मुलाचा जन्म दाखला</span></li><li><span class="n" style="background:#3DB8F0">4</span><span>Parents&#x27; Aadhaar cards · पालकांचे आधार कार्ड<small>one is enough for a single parent or guardian · एक पालक/पालनकर्ता असल्यास एक पुरेसे</small></span></li></ol><div class="gate"><label class="check"><input type="checkbox" id="w-have"/><span>I have these documents on my phone, or on paper and can photograph them · ही कागदपत्रे माझ्या फोनमध्ये आहेत किंवा कागदावर आहेत व फोटो काढू शकतो</span></label></div><p class="hint" style="margin-bottom:14px">Missing one? You can still start and upload it later. · एखादे कागदपत्र नाही? तरीही अर्ज सुरू करा, नंतर अपलोड करता येईल.</p><div class="nav"><button type="button" id="w-start" class="btn btn-pink full-w" disabled="">Start the form · अर्ज सुरू करा →</button><button type="button" id="w-back" class="btn-link">← Back · मागे</button></div><div id="w-err" class="note bad" role="alert" style="margin-top:12px;margin-bottom:0" hidden=""></div></section></div></div></main><footer class="ft"><div class="wrap"><h3>Tulips Pre Primary School, Ichalkaranji</h3><p>+91 90110 32851 · +91 74997 68838</p><p><a href="https://tulipspreprimaryschool.in/">tulipspreprimaryschool.in</a></p></div></footer></div></div><div id="w-wait" class="tw" style="background:linear-gradient(120deg,#EB5688,#8E63D8 55%,#3DB8F0)" hidden=""><div class="spin"></div></div>
+<div id="root"></div>
+<script>(function(){var $=function(i){return document.getElementById(i)},q=new URLSearchParams(location.search),got=0;
+function load(){if(got)return;got=1;var s=document.createElement('script');s.type='module';s.src="/admission/form-7CZLX3JN.js";document.body.appendChild(s)}
+if(q.get('c')){$('w-page').hidden=true;$('w-wait').hidden=false;load();return}
+if(document.readyState==='complete')load();else{addEventListener('load',load);setTimeout(load,1500)}
+function act(a){if(window.TW)window.TW.run(a);else{(window.TWQ=window.TWQ||[]).push(a);load()}}
+function show(id){$('w-welcome').hidden=id!=='w-welcome';$('w-docs').hidden=id!=='w-docs';var s=$('tw-scroll');if(s)s.scrollTo(0,0)}
+var saved=null;try{saved=localStorage.getItem("admission:tulips")}catch(e){}
+var n=$('w-new');
+if(saved){var k=$('w-continue');k.hidden=false;k.onclick=function(){k.disabled=true;k.textContent='…';act(['open',saved])};
+n.className='btn btn-outline full-w';n.textContent='Start a new form (another child) · नवीन अर्ज'}
+n.onclick=function(){show('w-docs')};
+$('w-back').onclick=function(){show('w-welcome')};
+var h=$('w-have'),s=$('w-start');h.checked=false;h.onchange=function(){s.disabled=!h.checked};
+s.onclick=function(){s.disabled=true;s.textContent='…';$('w-err').hidden=true;act(['start'])};
+})();</script>
+</body>
 </html>
